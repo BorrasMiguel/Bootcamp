@@ -210,24 +210,130 @@
             </select> 
         </div><br>
         
+        <!-- Date  -->
         <div class="inputBlock">
-        <label for="agenumber">Edad:</label><br>
-        <input type="number" id="agenumber" name="ageinput" min="0" max="120"><br>
+            <label for="agenumber">Edad:</label><br>
+            <input type="number" id="agenumber" name="ageinput" min="0" max="120"><br>
+            
+            <label for="dateinput">Fecha de nacimiento:</label><br>
+            <input type="date" name="dateinput" id="dateinput">
         </div>
 
+        
+
         <div class="inputBlock">
-            <label for="dateinput">Fecha:</label><br>
-            <input type="date" name="dateinput" id="dateinput">
+            <label for="carBrandInput">La marca de tu coche</label>
+            <input type="text" name="carBrand" id="carBrandInput" list="carBrandlist">
+            <datalist id="carBrandlist">
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="mustang">Mustang</option>
+                <option value="ford">Ford</option>
+                <option value="volkswagen">Volkswagen</option>
+            </datalist>
         </div>
 
         <br><br>
 
-        <input type="submit" value="Guardar">
+        <fieldset>
+            <legend>Informacion de tu pareja</legend>
+            <div class="inputBlock"> 
+                <label for="nameInput">Nombre:</label><br>
+                <input required type="text" id="nameInput2" name="userName" placeholder="Introduce tu nombre">
+            </div><br>
+            
+             
+            <div class="inputBlock">
+                <label for="nameInput">Apellidos:</label><br>
+                <input required type="text" id="lastNameInput2" name="lastName" placeholder="Introduce tus apellidos">
+            </div><br><div class="inputBlock"> 
 
+        </div><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Estado civil</legend>
+            <div>
+                <input type="radio" name="civilState" id="marriedInput">
+                <label for="marriedInput">Casado</label>
+            </div>
+            <div>
+                <input type="radio" name="civilState" id="singleInput" checked>
+                <label for="singleInput">Soltero</label>
+            </div>
+            <div>
+                <input type="radio" name="civilState" id="divorcedInput" required>
+                <label for="divorcedInput">Divorciado</label>
+            </div>
+        </fieldset>
         
+        <fieldset>
+            <legend>Estado civil</legend>
+            <div>
+                <input type="checkbox" name="iphoneProduct" id="iphoneProduct" required>
+                <label for="iphoneProduct">iphone</label>
+            </div>
+            <div>
+                <input type="checkbox" name="macbookProduct" id="macbookProduct" required>
+                <label for="macbookProduct">Mackbook Pro</label>
+            </div>
+            <div>
+                <input type="checkbox" name="airpodsProduct" id="airpodsProduct" required>
+                <label for="airpodsProduct">Airpods</label>
+            </div>
+        </fieldset>
+        
+        <br><br>
+        
+        <label for="rangeInput">Seleccione la cantidad de elementos</label>
+        <input type="range" name="rangeInput" id="rangeInput">
 
+        <br><br>
+
+        <label for="fuellevel">Cantidad de gasolina</label>
+        <meter min="0" max=100 id="fiellevel" value="60"></meter>
+
+        <label for="progressInput">Progreso</label>
+        <progress max="100" value="35" id="progressInput">60</progress>
+
+        <br><br>
+
+        <div>
+            <label for="fileInput">Subir Archivo</label>
+            <input type="file" id="fileInput" name="fileInput">
+        </div><br>
+
+
+        <input type="submit" value="Guardar">
+        <input type="reset" value="Vaciar">
 
     </form>
+    <br><br><br><br>
+
+
+    <!-- Multimedia / Media -->
+
+    <img src="Imagenes/background.png" width="500" alt="comecocos">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fTzSI_MY98o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <br>
+
+    <button>click</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
