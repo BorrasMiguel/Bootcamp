@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+}
+
+#primero {
+    height: 50vh;
+    background-image: url(/Tema_3_CSS/Ejemplo/Images/MAlaga.jpg);
+
+    /* eje x: left center right // eje y: top center bottom */
+    background-position: center bottom;
+
+    /* background-attachment: fixed; */
+
+    /* margenes */
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin: 20px;
+
+    /* border */
+    /* border-bottom: coral;
+    border-top: red;
+    border-width: 10px;
+    border-style: solid; */
+    border: 5px solid  red;      /*dos formas abreviado y detallado*/
+    border-bottom: 5px solid green;
+    border-top: 5px solid purple;
+
+    /* padding margen interno  */
+    padding-left: 100px;
+    padding-top: 100px;
+    padding: 100px 20px;
+    
+}
+
+.empty {
+    height: 500px;
+    background-color: brown;
+}
+
+h1, span {
+    color: black;
+    margin: 0;
+    border: 5px solid greenyellow;
+}
