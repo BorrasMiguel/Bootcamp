@@ -1,0 +1,96 @@
+/* Tipos de Display: none, inline, block, inline-block */
+[class^="box"] {
+    background-color: steelblue;
+}
+
+.box-0 {
+    display: none;
+}
+
+.box-3,
+.box-3 p,
+.box-4, 
+.box-4 p {
+    display: inline-block;
+
+}
+
+.box-5, /*Selecciona el div box 5 clase box 5*/
+.box-6, /*Selecciona el div box 6 clase box 6*/
+.box-5 p, /*Selecciona el div box 5 clase box 5 y el parrafo de dentro*/
+.box-6 p { /*Selecciona el div box 6 clase box 6 y el parrafo de dentro*/
+
+    display: inline;
+}
+
+.rectangle {
+    background-color: teal;
+    height: 50px;
+    width: 25%; /*Porcentaje siempre relativo a su elemento padre*/
+}
+
+/*Centrar horizontalmente Eje X*/
+.x-centered {
+    margin: auto;
+}
+
+/*Posicion Relativa*/
+.pos-relative {
+    position: relative;
+    left: 150px;
+    top: -50px;
+    z-index: -1; /*Controla la superposicióm*/
+}
+
+/*Posicion Absoluta*/
+.pos-absoluta-parent {
+    height: 300px;
+    border: 15px solid red;
+
+    position: relative;
+}
+
+.pos-absoluta-child {
+    height: 50px;
+    width: 50px;
+    background-color: #333;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+/* Posicion Fijo / Fixed */
+.pos-fixed {
+    background-color: green;
+    padding: 20px 30px;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.pos-fixed a {
+    color: white;
+    text-decoration: none;
+}
+
+.pos-sticky {
+    background-color: steelblue;
+    padding: 15px 25px;
+
+    position: sticky;
+    top: 0;
+    z-index: -1;
+
+}
+
+.pos-sticky a {
+    color: white;
+    padding: 15px 20px;
+
+    
+    text-decoration: none;
+}

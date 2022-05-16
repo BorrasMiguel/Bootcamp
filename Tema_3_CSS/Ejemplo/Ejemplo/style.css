@@ -37,6 +37,7 @@
 .empty {
     height: 500px;
     background-color: brown;
+    width: 50%;
 }
 
 h1, span {
