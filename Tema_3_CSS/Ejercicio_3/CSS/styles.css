@@ -1,0 +1,22 @@
+ul {
+    padding: 0px;
+    width: 150px;
+}
+
+ul li {
+    color: #333;
+    background-color: #bbb;
+    padding: 4px;
+
+    list-style-position: inside; /*Mete los puntos dentro del li*/
+    list-style-image: url(/Tema_3_CSS/Ejercicio_3/CSS/images/avance-rapido.png);
+    cursor: pointer;
+    border: 1px solid rgb(179, 179, 179);
+}
+
+ul li:hover {
+    color: blueviolet;
+    background-color: rgb(123, 123, 123);
+}
+
+

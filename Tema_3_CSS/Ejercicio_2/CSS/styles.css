@@ -1,0 +1,27 @@
+nav {
+    border: 1px solid #ddd;
+    background-color: rgb(200, 200, 200);
+    padding: 12px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Solucion 1 con posicionamiento absoluto */
+
+nav {
+    position: relative;
+}
+
+nav a:last-child {
+    position: absolute;
+    right: 12px;
+}
+
+/* Solucion 2 con posicionamiento flotante */
+
+/* nav a:last-child {
+    float: right;
+} */
