@@ -64,12 +64,12 @@
 
 /* Posicion Fijo / Fixed */
 .pos-fixed {
-    background-color: green;
+    /* background-color: green;
     padding: 20px 30px;
 
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 30px; */
 }
 
 .pos-fixed a {
@@ -210,3 +210,83 @@
         width: 100%;
     }
 }
+
+
+/* Flexbox */
+
+.flex-parent {
+    display: flex;
+    flex-direction: row; /*row (defecto), row-reverse, column, column-reverse*/
+
+    height: 250px;
+    border: 1px solid #333;
+
+    flex-wrap: nowrap; /*controla una nueva linea si no hay espacio (por defecto)*/
+    /* flex-wrap: nowrap; lo mantiene todo y lo va haciendo mas pequeño pero no los cambia de fila */
+    /* flex-flow: row wrap; Es un ayuda y hace lo mismo que lo de arriva pero en un mismo comando */
+
+    justify-content: center;
+    justify-content: flex-start;
+    justify-content: flex-end;
+
+    justify-content: space-around; /*espacio por todos los lados*/
+    justify-content: space-between; /*solo espacio en medio*/
+    justify-content: space-evenly;
+
+    align-items: center;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: stretch; /* Alinea a lo largo del eje vertical*/
+}
+
+[class^="flex-child"] {
+    width: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-parent>div:nth-child(odd) {  /* Pseudo clase Elegir el hijo que quieras*/ /*odd y even selecionan pares o impares*/
+    background-color: #333;
+    color: #ddd;
+
+}
+
+.flex-parent>div:nth-child(even) {  /*Elegir el hijo que quieras*/
+    background-color: #ddd;
+    color: #333;
+}
+
+.flex-child-1 {
+    flex-shrink: 2;
+    flex-basis: 250px; /*Es el tamaño base, a partir de ese punto ya no sigue creciendo, siempre que no se haya puesto flex-grow*/
+}
+
+.flex-child-2 {
+    flex-grow: 2;
+    flex-basis: 250px;
+}
+
+.flex-child-3 {
+    flex-shrink: 3;
+    flex-grow: 3;
+    flex-basis: 250px;
+}
+
+
+/* CSS Grid básico con media queries */
+
+[class^="grid-child"] {
+    background-color: orange;
+}
+
+.grid-parent {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    grid-template-rows:1fr 2fr;
+}
+
+@media only screen and ()
