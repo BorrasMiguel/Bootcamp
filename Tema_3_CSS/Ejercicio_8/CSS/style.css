@@ -1,0 +1,45 @@
+[class^="child-bot"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.parent-content {
+    display: grid;
+    gap: 5px;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr;
+
+    grid-template-areas: "nav nav"
+                         "content1 content2"
+                         "content1 content3"
+                         "footer footer";
+}    
+
+.parent-content > .child-bot-1 {
+    grid-area: nav;
+    background-color: cyan;
+}
+
+.parent-content > .child-bot-2 {
+    grid-area: content1;
+    background-color: violet;
+}
+
+.parent-content > .child-bot-3 {
+    grid-area: content2;
+    background-color: black;
+    color: white;
+}
+
+.parent-content > .child-bot-4 {
+    grid-area: content3;
+    background-color: lightblue;
+}
+
+.parent-content > .child-bot-5 {
+    grid-area: footer;
+    background-color: blanchedalmond;
+}

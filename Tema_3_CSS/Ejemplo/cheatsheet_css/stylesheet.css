@@ -279,14 +279,105 @@
 
 [class^="grid-child"] {
     background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-parent {
     display: grid;
 
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 10px;
     grid-template-rows:1fr 2fr;
+    gap: 10px;
+    
 }
 
-@media only screen and ()
+@media only screen and (max-width: 920px) {
+    .grid-parent {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-parent {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CSS Grid por lineas */
+
+.grid-parent-2 { /*Primero se le da forma al padre*/
+    display: grid;
+
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.grid-parent-2 > .grid-child-1 { /*Despues de le va dando forma hijo a hijo*/
+    grid-column: 1 / 3; /*De la linea 1 a la linea 3*/
+    grid-row: 1; /*Equivalente a 1 / 2*/
+}
+
+.grid-parent-2 > .grid-child-2 { /*Despues de le va dando forma hijo a hijo*/
+    grid-column: 3; 
+    grid-row: 1 / 3; 
+}
+
+.grid-parent-2 > .grid-child-3 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 5;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.grid-parent-2 > .grid-child-4 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.grid-parent-2 > .grid-child-5 {
+    grid-column: 2 / 4 ;
+    grid-row: 4;
+}
+
+.grid-parent-2 > .grid-child-6 {
+    grid-column: 1 / 2 ;
+    grid-row: 2;
+}
+
+/* CSS Grid por Areas */
+
+.grid-parent-3 {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+
+    grid-template-areas: "content1 nav nav"
+                         "content1 content2 content3"
+                         "footer footer footer";                           
+}
+
+.grid-parent-3 > .grid-child-1 {
+    grid-area: nav;
+}
+
+.grid-parent-3 > .grid-child-2 {
+    grid-area: content1;
+}
+
+.grid-parent-3 > .grid-child-3 {
+    grid-area: content2;
+}
+
+.grid-parent-3 > .grid-child-4 {
+    grid-area: content3;
+}
+
+.grid-parent-3 > .grid-child-5 {
+    grid-area: footer;
+}
