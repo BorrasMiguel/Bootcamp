@@ -381,3 +381,104 @@
 .grid-parent-3 > .grid-child-5 {
     grid-area: footer;
 }
+
+
+/* Iconos / Icons */
+.menu-icon {
+    color: yellowgreen;
+}
+
+/* Degradados */
+
+[class^="gradient"] {
+    height: 100px;
+    background-color: aqua;
+    margin-bottom: 10px;
+}
+
+.gradient-1 {
+    background: linear-gradient(to right, darkblue, white);
+}
+
+.gradient-2 {
+    background: linear-gradient(to bottom, white, darkblue 20%, white);
+}
+
+.gradient-3 {
+    background: radial-gradient(white, red);
+}
+
+.gradient-4 {
+    box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.50) ;
+}
+
+/* Transformaciones */
+
+.transform {
+    height: 70px;
+    width: 70px;
+    background-color: #333;
+
+    transform: translate(300px, -20px) scale(1.5) skew(25deg);
+   
+}
+
+/* Transiciones */
+
+.transitions {
+    height: 100px;
+    width: 100px;
+    background-color: darkcyan;
+    color: #ddd;
+    margin-left: 20px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+    /* transition-delay: 1s; */
+    transition-timing-function: ease-in-out ;
+
+    /* transition: transform 0.5s, ease-in; engloba todo  */
+
+}
+
+.transitions:hover {
+    transform: scale(1.3) rotate(3deg);
+}
+
+/* Animaciones */
+
+.text-animation {
+    height: 130px;
+    width: 130px;
+    background-color: goldenrod;
+    color: #ddd;
+    margin-left: 20px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: slidein;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+
+    50% {
+        color: #333;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
