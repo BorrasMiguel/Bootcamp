@@ -4,7 +4,7 @@
 
 #primero {
     height: 50vh;
-    background-image: url(/Tema_3_CSS/Ejemplo/Images/MAlaga.jpg);
+    background-image: url(/Tema_3_CSS/Ejemplo/Ejemplo/Images/MAlaga.jpg);
 
     /* eje x: left center right // eje y: top center bottom */
     background-position: center bottom;
