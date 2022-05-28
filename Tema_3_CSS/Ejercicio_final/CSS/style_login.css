@@ -3,25 +3,21 @@ body {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 a {
     text-decoration: none;
 }
 
-.login {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
 
 .dashboard {
-    height: 550px;
-    width: 1200px;
-    margin-top: 50px;
+    height: 70vh;
+    width: 80vw;
+    margin-top: 100px;
     border-radius: 5px;
-    box-shadow: 0 15px 15px 15px  rgba(229, 229, 229, 0.2);
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
     overflow: hidden;
     
 
@@ -51,7 +47,6 @@ a {
 }
 
 .image {
-
     background-image: url(/Tema_3_CSS/Ejercicio_final/CSS/images/pexels-zarak-khan-4256211.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,5 +119,38 @@ button > img {
     margin-right: 5px;
     width: 25px;
 }
+
+@media only screen and (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 40% 20% 20% ;
+    }
+
+    .dashboard  > .image {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    .dashboard > form {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .dashboard > .social {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4
+    }
+
+    .dashboard > .recovery {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+}
+
+
+
+    
+
 
 
