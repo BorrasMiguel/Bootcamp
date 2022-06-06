@@ -1,0 +1,32 @@
+.carousel-item:nth-child(1){
+    background-image:url(/Tema_4_Bootstrap/ejercicio_bootstrap/images/pexels-torsten-dettlaff-70912.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.carousel-item:nth-child(2){
+    background-image:url(/Tema_4_Bootstrap/ejercicio_bootstrap/images/pexels-pixabay-326259.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.carousel-item:nth-child(3){
+    background-image:url(/Tema_4_Bootstrap/ejercicio_bootstrap/images/pexels-sourav-mishra-1149831.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.photo{
+    background-image: url(/Tema_4_Bootstrap/ejercicio_bootstrap/images/pexels-albin-berlin-919073.jpg);
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    overflow: hidden;
+} 
