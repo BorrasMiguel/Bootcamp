@@ -1,22 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    padding: 30px;
+    padding: 0 0 10px 10px;
     height: 100vh;
     width: 100vw;
-    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     
 }
 
+
+
 a {
     text-decoration: none;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px 0px 10px 0px;
+.box {
+    padding: 10px;
+    border-radius: 7px;
+    border: 0;
+    width: 100%;
+    background-color: #7e3af2;
+    color: #f3f3f3;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: #691fe8;
+    transition: 2;
+}
+
+.slide-button {
+    width: 80%;
 }
 
 .parent {
@@ -25,7 +46,7 @@ ul {
     grid-template-rows: 50px 1fr;
 }
 
-.aside-content {
+.parent > .aside-content {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
@@ -45,16 +66,46 @@ ul {
     grid-row: 2 / 3;
 } */
 
-.aside-content {
-    background-color: #f4f5f7;
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
+
+.aside-content h3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 3;
 }
 
+.aside-content img {
+    padding-right: 10px;
+}
+
+.aside-list {
+    margin: 0;
+    padding: 30px 0px 30px 0px;
+}
+
+.aside-list div {
+    padding: 10px 0 10px 10px;
+    
+    font-size: medium
+    font-weight: bold;
+}
+
+.list-button {
+    background: none;
+	border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #24262d;
+    display: flex;
+    align-items: center;
+    
+}
 
 .container-dashboard {
-    padding: 20px 300px;
+    padding: 20px 100px;
+    color: ;
 }
 
 
@@ -64,7 +115,7 @@ ul {
     margin: 25px 0;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
 
 }
 
@@ -80,8 +131,67 @@ ul {
     width: 5px;
 } */
 
-.content-table tbody tr td:first-child {
-    width: 10px;
+.td-img {
+    width:0;
+    white-space: nowrap;
+}
+
+.perfil-bar {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.29);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.perfil-bar form {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.perfil-bar .search-field {
+    padding: 8px 40px;
+    background-color: #f4eeee;
+    border-radius: 5px;
+    border: 0;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    margin-right: -30px;
+    outline: none;
+    z-index: 3;
+}
+
+.search-button img {
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+}
+
+.dashboard-button button {
+    background: transparent;
+    border: none;
+    color: #f6f6f6;
+    font-weight: bolder;
+}
+
+.dashboard-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-info>box {
+    height: 30px;
+    width: 60px;
+    padding: 10px;
+    border: 1px solid black
 }
 
 .content-table th {

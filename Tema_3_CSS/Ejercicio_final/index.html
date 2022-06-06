@@ -17,23 +17,31 @@
     <div class="parent">
 
         <div class="aside-content">
-            <h2><a href="#">CodeSpace Shop</a></h2>
+            <h3>
+                <img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/startup.png" alt="">
+                CodeSpace Shop</h3>
             
-            <ul>
-                <li>Dashboard</li>
-                <li>Clients</li>
-                <li>Products</li>
-                <li>Sales</li>
-                <li>Shipping</li>
-                <li>Statistics</li>
-            </ul>
+            <div class="aside-list">
+                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/home-page.png" alt=""> Dashboard</button></div>
+                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/customer.png" alt="">Clients</button></div>
+                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/package.png" alt="">Products</button></div>
+                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/google-docs.png" alt="">Sales</button></div>
+                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/fast-delivery.png" alt="">Shipping</button></div>
+                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/trend.png" alt="">Statistics</button></div>
+            </div>
 
-            <button class="slide-button box">Add product</button>
+            <button class="slide-button box">
+                <span>Add product</span>
+                <span>+</span>
+            </button>
         </div>
 
         <div class="perfil-bar">
             <form id="form">
-                <input type="search" id="query" name="search" placeholder="Search for anything">
+                <button type="submit" class="search-button">
+                    <img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/lupa.png" alt="">
+                </button>
+                <input  type="search" class="search-field" placeholder="Search for anything">
             </form>
         </div>
 
@@ -41,10 +49,10 @@
             <div class="dashboard-title">
                 <h2>Dashboard</h2>
 
-                <button class="dashboard-button box">
-                    <a href="#">See what you've missed!</a>
-                    <a href="#">View more &#8594;</a>
-                </button>
+                <div class="dashboard-button box">
+                    <button>See what you've missed!</button>
+                    <button>View more &#8594;</button>
+                </div>
             </div>
 
             <div class="dashboard-info">
@@ -84,7 +92,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
+                        <td class="td-img">
                             <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-5412f70be45a8eaf699dbeabac657ff0.jpg" alt="">
                         </td>
                         <td>
@@ -96,7 +104,7 @@
                         <td>6/19/2020</td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="td-img">
                             <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-6dee411a63532ffa40c9beca1bef24fb.jpg" alt="">
                         </td>
                         <td> <div class="name">Sarah Curry</div>
@@ -107,7 +115,7 @@
                         <td>6/19/2020</td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="td-img">
                             <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-94c93b4ac967d68ca4ef3ca5241ef4d0.jpg" alt="">
                         </td>
                         <td>
@@ -119,7 +127,7 @@
                         <td>6/19/2020</td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="td-img">
                             <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-c72d8e0d9a9a8a69136c51edf3d94609.jpg" alt="">
                         </td>
                         <td>
@@ -131,7 +139,7 @@
                         <td>6/19/2020</td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="td-img">
                             <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-6aca2c368cf63ea1beed09f528e40a82.jpg" alt="">
                         </td>
                         <td>
@@ -143,7 +151,7 @@
                         <td>6/19/2020</td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="td-img">
                             <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-785b42cd4f99e149fe5602f4ace51f83.jpg" alt="">
                         </td>
                         <td>
@@ -155,7 +163,7 @@
                         <td>6/19/2020</td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="td-img">
                             <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-a1e52eedcf49fca918c00413ea482038.jpg" alt="">
                         </td>
                         <td>
@@ -167,7 +175,7 @@
                         <td>6/19/2020</td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="td-img">
                             <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-e610ade68bf78dba275cbb21329d8874.jpg" alt="">
                         </td>
                         <td>
@@ -178,8 +186,7 @@
                         <td><img class="statusimage" src="" alt=""></td>
                         <td>6/19/2020</td>
                     </tr>
-                </tbody>
-                <tfoot>
+                    <tfoot>
                     <tr>
                         <td>
                             <div class="showing">SHOWING 21-30 OF 100</div>
@@ -199,6 +206,8 @@
                         </td>
                     </tr>
                 </tfoot>
+                </tbody>
+                
             </table>
         </div>
 
