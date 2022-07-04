@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="CSS/CSS2.css">
+    <script src="https://kit.fontawesome.com/a556751e22.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  -->
+
+<link rel="stylesheet" href="https://fonts.gstatic.com/s/inter/v11/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZJhiI2B.woff2">
+<body>
+    <aside>
+        <h3><i class="fa-solid fa-rocket-launch fa-lg"></i>CodeSpace Shop</h3>
+        <ul>
+            <li><i class="fa-solid fa-house fa-xs"></i>Dashboard</li>
+            <li><i class="fa-solid fa-user-group fa-xs"></i>Clients</li>
+            <li><i class="fa-solid fa-box-open fa-xs"></i>Products</li>
+            <li><i class="fa-solid fa-file-lines fa-xs"></i>Sales</li>
+            <li><i class="fa-solid fa-truck fa-xs"></i>Shipping</li>
+            <li><i class="fa-solid fa-chart-pie fa-xs"></i>Statistics</li>
+        </ul>
+        <Button class="button-box">
+            <a href="#">Add Product</a>
+            <a href="#">+</a>
+        </Button>
+    </aside>
+
+    <div class="navbar">
+        <div></div>
+        <form action="#">
+            <button>
+                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+            </button>
+            <input type="text" placeholder="Search for anything">
+        </form>
+
+        <div class="notification">
+            <span><i class="fa-solid fa-bell fa-xl"></i></span>
+            <img src="CSS/images/perfilphoto/avatar-6aca2c368cf63ea1beed09f528e40a82.jpg" alt="">
+        </div>
+
+    </div>
+
+    <div class="dashboard">
+        <h1>Dashboard</h1>
+        
+        <button class="button-box">
+            <span><a href="#"><i class="fa-solid fa-star fa-xg"></i>See what you`ve missed!</a></span>
+            <span><a href="#">View more<i class="fa-solid fa-arrow-right-long fa-xs"></i></a></span>
+        </button>
+    </div>
+
+    <div class="boxes">
+        <div class="box">
+            <span><i class="fa-solid fa-users fa-xl"></i></span>
+            <div>Total Clients
+                <p>6389</p>
+            </div>
+        </div>
+        <div class="box">
+            <span><i class="fa-solid fa-money-bill fa-xl"></i></span>
+            <div>Account Balance
+                <p>&#36; 47,784.89</p>
+            </div>
+        </div>
+        <div class="box">
+            <span><i class="fa-solid fa-cart-shopping fa-xl"></i></span>
+            <div>New Sales
+                <p>370</p>
+            </div>
+        </div>
+        <div class="box">
+            <span><i class="fa-solid fa-comment fa-xl"></i></span>
+            <div>Pending contacts
+                <p>35</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>CLIENT</th>
+                    <th>AMOUNT</th>
+                    <th>STATUS</th>
+                    <th>DATE</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="CSS/images/perfilphoto/avatar-5412f70be45a8eaf699dbeabac657ff0.jpg" alt="perfil.img">
+                            <div class="name">Hans Burger
+                                <p>10x Developer</p>
+                            </div>
+                        </td>
+                        <td>&#36; 854,65</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
+                    </tr>
+                    <tr>
+                        <td><img src="CSS/images/perfilphoto/avatar-6aca2c368cf63ea1beed09f528e40a82.jpg" alt="perfil.img">
+                            <div class="name">Sarah Curry 
+                                <p>Designer</p>
+                            </div>
+                        </td>
+                        <td>&#36; 8.213,10</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
+                    </tr>
+                    <tr>
+                        <td><img src="CSS/images/perfilphoto/avatar-6dee411a63532ffa40c9beca1bef24fb.jpg" alt="perfil.img">
+                            <div class="name">Rulia Roberts
+                                <p>Actress</p>
+                            </div>
+                        </td>
+                        <td>&#36; 345,5</td>
+                        <td><span>Expired</span></td>
+                        <td>06/10/2022</td>
+                    </tr>
+                    <tr>
+                        <td><img src="CSS/images/perfilphoto/avatar-785b42cd4f99e149fe5602f4ace51f83.jpg" alt="perfil.img">
+                            <div class="name">Wenzel Pepino
+                                <p>Actor</p>
+                            </div>
+                            
+                        </td>
+                        <td>&#36; 24,7</td>
+                        <td><span>Denied</span></td>
+                        <td>06/10/2022</td>
+                    </tr>
+                    <tr>
+                        <td><img src="CSS/images/perfilphoto/avatar-94c93b4ac967d68ca4ef3ca5241ef4d0.jpg" alt="perfil.img">
+                            <div class="name">Dave Li
+                                <p>Influencer</p>
+                            </div>
+                        </td>
+                        <td>&#36; 456,90</td>
+                        <td><span>Denied</span></td>
+                        <td>06/10/2022</td>
+                    </tr>
+                    <tr>
+                        <td><img src="CSS/images/perfilphoto/avatar-a1e52eedcf49fca918c00413ea482038.jpg" alt="perfil.img">
+                            <div class="name">Maria Lola
+                                <p>Runner</p>
+                            </div>
+                            
+                        </td>
+                        <td>&#36;46,7</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
+                    </tr>
+                    <tr>
+                        <td><img src="CSS/images/perfilphoto/avatar-c72d8e0d9a9a8a69136c51edf3d94609.jpg" alt="perfil.img">
+                            <div class="name">Hitney Wiston
+                                <p>Singer</p>
+                            </div>
+                        </td>
+                        <td>&#36; 53,21</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
+                    </tr>
+                    <tr>
+                        <td><img src="CSS/images/perfilphoto/avatar-e610ade68bf78dba275cbb21329d8874.jpg" alt="perfil.img">
+                            <div class="name">Hans Burger
+                                <p>10x Developer</p>
+                            </div>
+                        </td>
+                        <td>&#36; 21,10</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
+                    </tr>
+                </tbody>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td>Showing 21-30 of 100</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <div class="pages-button">
+                            <button class="button-table">&#8249;</button>
+                            <button class="button-table">1</button>
+                            <button class="button-table">2</button>
+                            <button class="button-table">3</button>
+                            <button class="button-table">4</button>
+                            <button class="button-table">...</button>
+                            <button class="button-table">8</button>
+                            <button class="button-table">9</button>
+                            <button class="button-table">&#8250;</button>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+
+
+
+</body>
+</html>
