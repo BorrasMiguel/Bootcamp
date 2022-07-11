@@ -1,216 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/Tema_3_CSS/Ejercicio_final/CSS/style_dashboard.css">
+    <title>Dashboard</title>
 
+    <link rel="stylesheet" href="CSS/CSS.css">
+    <script src="https://kit.fontawesome.com/a556751e22.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/9233e3686b.js" crossorigin="anonymous"></script>
-</head>
 
+<link rel="stylesheet" href="https://fonts.gstatic.com/s/inter/v11/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZJhiI2B.woff2">
 <body>
-    <div class="parent">
+    <aside>
+        <h3><i class="fa-solid fa-rocket-launch fa-lg"></i>CodeSpace Shop</h3>
+        <ul>
+            <li><i class="fa-solid fa-house fa-xs"></i>Dashboard</li>
+            <li><i class="fa-solid fa-user-group fa-xs"></i>Clients</li>
+            <li><i class="fa-solid fa-box-open fa-xs"></i>Products</li>
+            <li><i class="fa-solid fa-file-lines fa-xs"></i>Sales</li>
+            <li><i class="fa-solid fa-truck fa-xs"></i>Shipping</li>
+            <li><i class="fa-solid fa-chart-pie fa-xs"></i>Statistics</li>
+        </ul>
+        <Button class="button-box">
+            <a href="#">Add Product</a>
+            <a href="#">+</a>
+        </Button>
+    </aside>
 
-        <div class="aside-content div1">
-            <h3>
-                <img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/startup.png" alt="">
-                CodeSpace Shop</h3>
-            
-            <div class="aside-list">
-                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/home-page.png" alt=""> Dashboard</button></div>
-                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/customer.png" alt="">Clients</button></div>
-                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/package.png" alt="">Products</button></div>
-                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/google-docs.png" alt="">Sales</button></div>
-                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/fast-delivery.png" alt="">Shipping</button></div>
-                <div><button class="list-button"><img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/trend.png" alt="">Statistics</button></div>
-            </div>
+    <div class="navbar">
+        <div></div>
+        <form action="#">
+            <button>
+                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+            </button>
+            <input type="text" placeholder="Search for anything">
+        </form>
 
-            <button class="slide-button box">
-                <span>Add product</span>
-                <span>+</span>
+        <div class="notification">
+            <span><i class="fa-solid fa-bell fa-xl"></i></span>
+            <img src="CSS/images/perfilphoto/avatar-6aca2c368cf63ea1beed09f528e40a82.jpg" alt="">
+        </div>
+
+    </div>
+
+    <div class="dashboard">
+        <div>
+            <h1>Dashboard</h1>
+        </div>
+        
+        <div>
+            <button class="button-box">
+                <span><a href="#"><i class="fa-solid fa-star fa-xg"></i>See what you`ve missed!</a></span>
+                <span><a href="#">View more<i class="fa-solid fa-arrow-right-long fa-xs"></i></a></span>
             </button>
         </div>
+    </div>
 
-        <div class="perfil-bar div2">
-            <form id="form">
-                <button type="submit" class="search-button">
-                    <img src="/Tema_3_CSS/Ejercicio_final/CSS/icons/lupa.png" alt="">
-                </button>
-                <input  type="search" class="search-field" placeholder="Search for anything">
-            </form>
-        </div>
-
-        <div class="container-dashboard div3">
-            <div class="dashboard-title">
-                <h2>Dashboard</h2>
-
-                <div class="dashboard-button box">
-                    <button>See what you've missed!</button>
-                    <button>View more &#8594;</button>
-                </div>
-            </div>
-
-            <div class="dashboard-info">
-                <div class="caja"> 
-                    <span><i class="fa-solid fa-users fa-lg"></i></span>
-                    <div class="section">Total clients
-                        <p>6489</p>
-                    </div>
-                </div>
-                <div class="caja">
-                    <span><i class="fa-solid fa-money-bill fa-lg"></i></span>
-                    <div class="section">Account blance
-                        <p>&#36; 46,760.89</p>
-                    </div>
-                </div>
-                <div class="caja">
-                    <span><i class="fa-solid fa-cart-shopping fa-lg"></i></span>
-                    <div class="section">New sales
-                        <p>376</p>
-                    </div>
-                </div>
-                <div class="caja">
-                    <span><i class="fa-solid fa-comment fa-lg"></i></span>
-                    <div class="section">Pending contacts
-                        <p>35</p>
-                    </div>
-                </div>
+    <div class="boxes">
+        <div class="box">
+            <span><i class="fa-solid fa-users fa-xl"></i></span>
+            <div>Total Clients
+                <p>6389</p>
             </div>
         </div>
-            
-        <div class="container-table div4">
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>CLIENT</th>
-                        <th>AMOUNT</th>
-                        <th>STATUS</th>
-                        <th>DATE</th>
-                    </tr>
-                </thead>
+        <div class="box">
+            <span><i class="fa-solid fa-money-bill fa-xl"></i></span>
+            <div>Account Balance
+                <p>&#36; 47,784.89</p>
+            </div>
+        </div>
+        <div class="box">
+            <span><i class="fa-solid fa-cart-shopping fa-xl"></i></span>
+            <div>New Sales
+                <p>370</p>
+            </div>
+        </div>
+        <div class="box">
+            <span><i class="fa-solid fa-comment fa-xl"></i></span>
+            <div>Pending contacts
+                <p>35</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>CLIENT</th>
+                    <th>AMOUNT</th>
+                    <th>STATUS</th>
+                    <th>DATE</th>
+                </tr>
                 <tbody>
                     <tr>
-                        <td class="td-img">
-                            <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-5412f70be45a8eaf699dbeabac657ff0.jpg" alt="">                   
+                        <td>
+                            <img src="CSS/images/perfilphoto/avatar-5412f70be45a8eaf699dbeabac657ff0.jpg" alt="perfil.img">
                             <div class="name">Hans Burger
                                 <p>10x Developer</p>
                             </div>
                         </td>
-                        <td>&#36; 863.45</td>
-                        <td><span><p>Approved</p></span></td>
-                        <td>6/19/2020</td>
+                        <td>&#36; 854,65</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
                     </tr>
                     <tr>
-                        <td class="td-img">
-                            <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-6dee411a63532ffa40c9beca1bef24fb.jpg" alt="">
-                            <div class="name">Sarah Curry
+                        <td><img src="CSS/images/perfilphoto/avatar-6aca2c368cf63ea1beed09f528e40a82.jpg" alt="perfil.img">
+                            <div class="name">Sarah Curry 
                                 <p>Designer</p>
                             </div>
                         </td>
-                        <td>&#36; 86</td>
-                        <td><span><p>Approved</p></span></td>
-                        <td>6/19/2020</td>
+                        <td>&#36; 8.213,10</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
                     </tr>
                     <tr>
-                        <td class="td-img">
-                            <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-94c93b4ac967d68ca4ef3ca5241ef4d0.jpg" alt="">
-                            <div class="name">Rulia Joberts
+                        <td><img src="CSS/images/perfilphoto/avatar-6dee411a63532ffa40c9beca1bef24fb.jpg" alt="perfil.img">
+                            <div class="name">Rulia Roberts
                                 <p>Actress</p>
                             </div>
                         </td>
-                        <td>&#36; 1276.45</td>
-                        <td><span><p>Approved</p></span></td>
-                        <td>6/19/2020</td>
+                        <td>&#36; 345,5</td>
+                        <td><span>Expired</span></td>
+                        <td>06/10/2022</td>
                     </tr>
                     <tr>
-                        <td class="td-img">
-                            <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-c72d8e0d9a9a8a69136c51edf3d94609.jpg" alt="">
-                            <div class="name">Wenzel Dashintong
+                        <td><img src="CSS/images/perfilphoto/avatar-785b42cd4f99e149fe5602f4ace51f83.jpg" alt="perfil.img">
+                            <div class="name">Wenzel Pepino
                                 <p>Actor</p>
                             </div>
+                            
                         </td>
-                        <td>&#36; 863.45</td>
-                        <td><span><p>Approved</p></span></td>
-                        <td>6/19/2020</td>
+                        <td>&#36; 24,7</td>
+                        <td><span>Denied</span></td>
+                        <td>06/10/2022</td>
                     </tr>
                     <tr>
-                        <td class="td-img">
-                            <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-6aca2c368cf63ea1beed09f528e40a82.jpg" alt="">
+                        <td><img src="CSS/images/perfilphoto/avatar-94c93b4ac967d68ca4ef3ca5241ef4d0.jpg" alt="perfil.img">
                             <div class="name">Dave Li
                                 <p>Influencer</p>
                             </div>
                         </td>
-                        <td>&#36; 863.45</td>
-                        <td><span><p>Denied</p></span></td>
-                        <td>6/19/2020</td>
+                        <td>&#36; 456,90</td>
+                        <td><span>Denied</span></td>
+                        <td>06/10/2022</td>
                     </tr>
                     <tr>
-                        <td class="td-img">
-                            <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-785b42cd4f99e149fe5602f4ace51f83.jpg" alt="">
-                            <div class="name">Maria Ramovich
+                        <td><img src="CSS/images/perfilphoto/avatar-a1e52eedcf49fca918c00413ea482038.jpg" alt="perfil.img">
+                            <div class="name">Maria Lola
                                 <p>Runner</p>
                             </div>
+                            
                         </td>
-                        <td>&#36; 863.45</td>
-                        <td><span><p>Approved</p></span></td>
-                        <td>6/19/2020</td>
+                        <td>&#36;46,7</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
                     </tr>
                     <tr>
-                        <td class="td-img">
-                            <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-a1e52eedcf49fca918c00413ea482038.jpg" alt="">
-                            <div class="name">Hitney Wouston
+                        <td><img src="CSS/images/perfilphoto/avatar-c72d8e0d9a9a8a69136c51edf3d94609.jpg" alt="perfil.img">
+                            <div class="name">Hitney Wiston
                                 <p>Singer</p>
                             </div>
                         </td>
-                        <td>&#36; 863.45</td>
-                        <td><span><p>Approved</p></span></td>
-                        <td>6/19/2020</td>
+                        <td>&#36; 53,21</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
                     </tr>
                     <tr>
-                        <td class="td-img">
-                            <img class="profilephoto" src="/Tema_3_CSS/Ejercicio_final/CSS/images/perfilphoto/avatar-e610ade68bf78dba275cbb21329d8874.jpg" alt="">
+                        <td><img src="CSS/images/perfilphoto/avatar-e610ade68bf78dba275cbb21329d8874.jpg" alt="perfil.img">
                             <div class="name">Hans Burger
                                 <p>10x Developer</p>
                             </div>
                         </td>
-                        <td>&#36; 863.45</td>
-                        <td><span><p>Approved</p></span></td>
-                        <td>6/19/2020</td>
+                        <td>&#36; 21,10</td>
+                        <td><span>Approved</span></td>
+                        <td>06/10/2022</td>
                     </tr>
-                    <tfoot>
-                        <tr>
-                            <td>
-                                <div class="showing">SHOWING 21-30 OF 100</div>
-                                <div class="selectores">
-                                    <button class="button-table">&#8249;</button>
-                                    <button class="button-table">1</button>
-                                    <button class="button-table">2</button>
-                                    <button class="button-table">3</button>
-                                    <button class="button-table">4</button>
-                                    <button class="button-table">...</button>
-                                    <button class="button-table">8</button>
-                                    <button class="button-table">9</button>
-                                    <button class="button-table">&#8250;</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tfoot>
                 </tbody>
-            
-            </table>
-        </div>
-        
-
-
-
+            </thead>
+            <tfoot>
+                <tr>
+                    <td>Showing 21-30 of 100</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <div class="pages-button">
+                            <button class="button-table">&#8249;</button>
+                            <button class="button-table">1</button>
+                            <button class="button-table">2</button>
+                            <button class="button-table">3</button>
+                            <button class="button-table">4</button>
+                            <button class="button-table">...</button>
+                            <button class="button-table">8</button>
+                            <button class="button-table">9</button>
+                            <button class="button-table">&#8250;</button>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
     </div>
-</body>
 
+
+
+
+
+</body>
 </html>
