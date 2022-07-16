@@ -124,7 +124,10 @@ let person = {
     }, //Pre-ES6
     jump() {
         console.log("Hey, estoy saltando");
-    } //ES6
+    }, //ES6
+    presentarse() {
+        console.log(`Me llamo ${this.name} y tengo ${this.age} años y ${this.blonde ? `soy rubio` : `soy moreno`}`);
+    }
 }
 
 
@@ -222,7 +225,7 @@ niño.amigos = ["Ana", "Sara", "Lola"];
 
 niño.amigos.unshift("Marta");
 
-niño.amigos.push("Alejandra")
+niño.amigos.push("Alejandra");
 
 console.log(niño);
 
@@ -234,13 +237,167 @@ console.log(niño);
 
 const randomNumber = 9;
 const guessedNumber = "5";
-if (randomNumber === guessedNumber) {
-    console.log("Has acertado el número");
-} else if (randomNumber > guessedNumber) {
-    console.log("El número secreto es mayor");
-} else {
-    console.log("El número secreto es menor");
+
+if (typeof randomNumber !== guessedNumber) {
+    console.log("Hey, tienes que introducir el mismo tipo");
 }
+
+
+// if (randomNumber === guessedNumber) {
+//     console.log("Has acertado el número");
+// } else if (randomNumber > guessedNumber) {
+//     console.log("El número secreto es mayor");
+// } else {
+//     console.log("El número secreto es menor");
+// }
+
+
+//Ternary Operator
+let variable = 12 < 10 ? "el primero es menor" : "el primero es mayor";
+console.log(variable);
+
+person.presentarse();
+
+
+//Switch
+let option = 3;
+switch (option) {
+    case 1: 
+        //Bloque de código para valor 1
+        console.log("Option vale 1");
+        break;
+    case 2:
+        //Bloque de código para valor 1
+        console.log("Option vale 2");
+        break;
+    case 3:
+        //Bloque de código para valor 1
+        console.log("Option vale 3");
+        break;
+    default : //De otro modo en Pseint
+        console.log("Otra opción");
+        break;
+}
+
+console.clear();
+
+//----------------------------------------------Function-------------------------
+//Nombradas
+function greet(name, lastName) {
+    return(`Hola ${name} ${lastName}. ¿Que tal?`);
+}
+console.log(greet ("Marcos", "Aurelio"));
+// greet("Marcos", "Aurelio");
+
+//Que te devuelva el cyecto de ejemplos interactivos, clone https://github.com/mdn/interactive-exampluadrado de un numero.
+function square(number) {
+    return number * number;
+}
+console.log(square(5));
+
+// Anonimas
+let numbersArray = [5, 1, 7, 51, 23];
+console.log(numbersArray);
+numbersArray.sort(); // Me lo ordena segun ASCII, no ordena numericamente
+console.log(numbersArray);
+
+/*El método sort() ordena los elementos de un arreglo (array) 
+localmente y devuelve el arreglo ordenado. La ordenación no es necesariamente estable. 
+El modo de ordenación por defecto responde a la posición del valor del string de acuerdo 
+a su valor Unicode.*/
+
+
+function orderNumbers(a, b) {
+    if (a < b) {
+        return -1;
+    } else if (a === b) {
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
+// Hay que agregarle una funcion para dotarlo de lógica. Se puede simplificar la funcion anterior.
+
+
+// NumberArray.sort(orderNumners)
+
+numbersArray.sort(function(a, b) {
+    if (a < b) {
+        return -1;
+    } else if (a === b) {
+        return 0;
+    } else {
+        return 1;
+    }
+})
+
+numbersArray.sort(function (a, b) {return a - b});
+
+console.log(typeof orderNumbers, typeof function (a, b) {return a -b});
+console.log(function (a, b) {return a - b});
+console.log(numbersArray);
+
+console.clear();
+//Arrow  Functions
+let perimeterOfSquare = function (side) {
+    return side * 4;
+}
+perimeterOfSquare = function (side) {return side * 4};  //(Opcional una unica linea)
+perimeterOfSquare = (side) => {return side * 4}; //Sustituyo funcion por la flecha
+perimeterOfSquare = (side) => side * 4; // Si solo quiero devolver algo,quito las llaves y return
+perimeterOfSquare = side => side * 4; // Si solo tiene un parametro puedo quitar parentesis
+
+console.log(perimeterOfSquare(5));
+
+perimeterOfSquare = side => side * 4;
+
+
+console.log(perimeterOfSquare(5));
+
+// console.log(typeof function () {});
+// console.log(typeof (() => {}));
+
+
+numbersArray.sort(function (a, b) {return a- b});
+numbersArray.sort((a, b) => a - b);
+
+console.clear();
+//---------------------------------------------Loops---------------------------------------------
+// FOR
+for (let i = 0; i <= 10; i++) {
+    console.log(`Indice: ${i}`);
+}
+
+// Definir y rellenar un Array con el indice i
+
+let arrayX = [];
+
+for (let i = 0; i <= 10; i++) {
+   arrayX.push(i)
+}
+console.log(arrayX);
+
+// WHILE
+let contador = 0;
+while (contador <= 10) {
+    console.log(contador);
+
+    contador++;
+}
+
+console.clear();
+
+
+// ForEach ---------> Pertenece a los arrays
+
+console.log(numbersArray);
+
+function myFunction (value, index) {
+    console.log(`Indice ${index}: ${value}`);
+};
+
+numbersArray.forEach(myFunction);
 
 
 
