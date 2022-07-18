@@ -397,11 +397,51 @@ function myFunction (value, index) {
     console.log(`Indice ${index}: ${value}`);
 };
 
-numbersArray.forEach(myFunction);
+console.clear();
+
+numbersArray.forEach((value, index) => console.log(`Indice ${index}: ${value}`));
+
+//Copiar un array elemento a elemento en otro array
+
+let otherArray = [];
+console.log(otherArray);
+
+numbersArray.forEach(item => otherArray.push(item));
+
+console.log(otherArray);
 
 
+// For of
+for (let item of numbersArray) {
+    console.log(item);
+}
 
+// Continue
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        continue;  //salta a la siguiente interacción
+    }
+    console.log("Using continue", i);
+}
 
+//Break
+let i = 0;
+let k = 0;
+
+mainloop: while (true) {  
+    console.log("Outer loop", i);
+    i++;
+    k = 1;
+    while (true) {
+        console.log("Inner loop", k);
+        k++;
+        if (k === 5 && i === 5) {
+            break mainloop;
+        } else if (k === 5) {
+            break;
+        }
+    }
+}
 
 
 

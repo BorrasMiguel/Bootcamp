@@ -16,6 +16,31 @@
             font-size: 3em;
             display: block;
         }
+
+        .grandparent {
+            height: 500px;
+            background-color: brown;
+
+        }
+
+        .grandparent, .grandparent div {
+            border: 5px solid black;
+            box-sizing: border-box;
+            display: flex;
+            gap: 25px;
+            flex-grow: 1px;
+            padding: 25px;
+        }
+
+        .parent {
+            background-color: darkcyan;
+        }
+
+        .child {
+            background-color: khaki;
+        }
+
+
     </style>
 </head>
 <body>
@@ -24,6 +49,22 @@
     <a href="#" onclick="alert(`Hola desde un script inline`)">Inline script</a>
     <a href="#">Internal script</a>
     <a href="#">Esternal script</a>
+
+
+    <h1>Acceso al DOM</h1>
+
+    <!-- .grandparent#grandparent>.parent#parent$*2>.child#child$*2 -->
+    <div class="grandparent" id="grandparent">
+        <div class="parent" id="parent1">
+            <div class="child" id="child1">Child 1</div>
+            <div class="child" id="child2">Child 2</div>
+        </div>
+        <div class="parent" id="parent2">
+            <div class="child" id="child3">Child 3</div>
+            <div class="child" id="child4">Child 4</div>
+        </div>
+    </div>
+   
 
 
 
@@ -46,7 +87,8 @@
         document.getElementsByTagName("a").item(1).addEventListenner("click", saludo);
     </script> -->
 
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/dom.js"></script>
     
 </body>
 
