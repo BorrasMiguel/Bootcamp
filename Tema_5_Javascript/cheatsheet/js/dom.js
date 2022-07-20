@@ -23,11 +23,27 @@ console.log(parent1);
 const children = document.getElementsByClassName("child");
 console.log(children);
 
-let element = document.querySelector("div#grandparent>.parent>div.child#child4"); //Este es el mas comodo, se puede poner grandparent child
+let element = document.querySelector(".grandparent div"); //Este es el mas comodo, se puede poner grandparent child
 console.log(element);
 
 //Modificar elementos
-parent1.style.backgroundColor = "#333";
+const changeBackground = (element, color) => element.style.backgroundColor = color;
+
+changeBackground(children[1], "#123");
+changeBackground(parent1, "red");
+changeBackground(parent2.children[1], "Blue");
+changeBackground(children[0].parentNode.parentNode, "#ddd");
+
+// changeBackground(parent1.children[1].previousElementSibling, "black"); Un doble salto no se debe usar, es un tutorial para que vea como se realiza
+
+
+
+
+
+
+parent2.style.backgroundColor = "#333";
+
+children[0].parentNode.style.backgtroundColor = "#333";
 
 
 
