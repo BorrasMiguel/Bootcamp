@@ -95,7 +95,7 @@ console.log("Hola Mundo".concat(". Adios Mundo"));
 str = str + ". Adios Mundo";
 str += ", Adios Mundo";
 console.log(str);
-
+let boolean === boolean={}
 console.log(str.replace("Mundo", "Futuro"));
 console.log(str.replaceAll("Mundo", "Futuro"));
 console.log(str.toLowerCase());
@@ -183,7 +183,7 @@ console.log(selectedColors, selectedColors.length);
 selectedColors.push("violet"); //Sirve para que el array agregue elementos al ultimo disponible
 console.log(selectedColors, selectedColors.length);
 
-selectedColors.pop();
+selectedColors.pop(); //Sirve para quitar elementos desde el principio del array.
 console.log(selectedColors, selectedColors.length);
 
 selectedColors.unshift("white"); //Sirve para añadir nuevos elementos al principio del array.
@@ -199,6 +199,9 @@ console.log(selectedColors, selectedColors.indexOf("red"));
 
 console.log(selectedColors.slice(1, 3)); //Selecciona los arrays.
 console.log(selectedColors);
+
+console.log("Los elementos borrados son: ", selectedColors.splice(1, 3)); //Borra los que queramos
+console.log("El array se quedaría así: ", selectedColors);
 
 console.log("Los elementos borrados son: ", selectedColors.splice(1, 3)); //Borra todo desde donde empieza hasta el numero que le indique de elementos que quieres que borres
 console.log("El array se queda así: ", selectedColors);
@@ -442,8 +445,4 @@ mainloop: while (true) {
         }
     }
 }
-
-
-
-
 
