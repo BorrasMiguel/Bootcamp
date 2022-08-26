@@ -297,3 +297,35 @@ const reverseString2 = function (string) {
 console.log(reverseString2("Hola Buneas Noches aquie estamos presentes"));
 
 // Aparatado 27 Crea una función que compare strings sin tener en cuenta las mayúsculas / minúsculas.
+
+const comparation = (str1, str2) => str1.toLowerCase() == str2.toLowerCase() && str1.toUpperCase() == str2.toUpperCase();
+
+console.log(comparation("Hola Mundo", "Adiós Mundo"));
+console.log(comparation("Hola Mundo", "hola mundo"));
+console.log(comparation("HOLA MUNDO", "hola mundo"));
+
+// Apartado 28. Crea una función que convierta en mayúscula sólo la primera letra de cada palabra de un string dado. El
+// apartado 11 será de ayuda. Investigar cómo unir un array de strings en un único string.
+
+const propertyFirtsToUpperCase = function (string) {
+   const words = string.split(" ");
+
+   for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substring(1);
+   }
+
+   return words.join(" ");
+
+};
+
+console.log(propertyFirtsToUpperCase("buenos dias desde linares"));
+
+// Apartado 29. Crea una función en una única línea que reciba un valor lógico y devuelva el opuesto.
+
+const negate = logical => !logical;
+console.log(negate(true));
+console.log(negate(false));
+
+
+
+

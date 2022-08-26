@@ -1,6 +1,11 @@
 //Apartado 1. Partimos de un html con un div vacio.
 // Con JS, añadir dos elmentos  p con un texto dentro.
 
+
+//________________________________________________________________________________________________________
+//________________________________________________________________________________________________________
+//Nota importante e.target es el elemento o nodo sobre el que se esta ejecutando el evento.
+
 const container = document.getElementsByTagName("div")[0];
 
 const parrafo1 = document.createElement("p");
@@ -38,8 +43,8 @@ listItems[1].addEventListener("click", changeImage);
 listItems[2].addEventListener("click", changeImage);
 
 
-// Aparatado 4. Escribe una funcion que devuelva la longitud de un string
-// recibido por argumento.
+// Aparatado 4. Añadir un input de tipo texto y un botón. Al pulsar el botón debe escribirse el texto del input en un párrafo.
+//4.2 Añadir un nuevo input pero esta vez cambiará el texto con cada pulsación de tecla del usuario.
 
 const ap4Paragraph = document.getElementById("filliableParagraph");
 const ap42Input = document.querySelector("input");
@@ -79,6 +84,7 @@ textarea.addEventListener("input", (e) => {
 
 const validate = document.querySelectorAll("input")[2];
 const validateButton = document.querySelectorAll("button")[2];
+//Tambien se puede usar validate.nextelementSibling para acceder al botton
 
 validateButton.addEventListener("click", () => {
     if (validate.value % 2 !== 0) {
@@ -116,3 +122,82 @@ const selectColor = document.getElementById("selectColor");
 selectColor.addEventListener("change", (e) => {
     pColor.style.color = e.target.value;
 })
+
+// Aparatado 10. Incluir un botón que al pulsarlo genere un número aleatorio y mantenga en una lista actualizada el número
+// de elementos que se han generado, los que son pares y los que son impares
+
+const buttonAleatory = document.getElementById("btn10");
+
+const currentRandom = document.getElementById("currentRandom");
+const oddNumbers = document.getElementById("oddNumbers");
+const evenNumbers = document.getElementById("evenNumbers");
+const totalNumbers = document.getElementById("totalNumbers");
+
+buttonAleatory.onclick = () => {
+    const randomNumber = Math.floor(Math.random() * 100);
+    currentRandom.textContent = randomNumber;
+
+    totalNumbers.textContent = Number(totalNumbers.textContent) + 1; // se puede hacer totalNumber.textcontent++
+
+    randomNumber % 2 === 0 ? evenNumbers.textContent++ : oddNumbers.textContent++;
+
+};
+
+//  Aparatado 11. Construir una lista que tenga números. Añadir un input donde poder añadir números y un botón. Al pulsar
+// el botón, si el número ya existe en la lista, mostrar un mensaje de error, si no existe, lo añadirá al
+// principio.
+
+const listApt11 = document.getElementById("ulApt11");
+const inputApt11 = document.getElementById("inputApt11");
+const btnApt11 = document.getElementById("btnApt11");
+
+const arrayApt11 = [];
+
+function fillList () {
+
+    listApt11.innerHTML = ""; // Vacia la lista y la rellena de nuevo elmento a elemento.
+    for (let i = 0; i < arrayApt11.length; i++) {
+        const newInputList = document.createElement("li");
+        newInputList.textContent = arrayApt11[i];
+        listApt11.appendChild(newInputList);
+    }
+
+};
+
+function addToList() {
+    // Parsea el input, comprueba si existe y lo añade.
+    let inputNumber = Number(inputApt11.value);
+    if (arrayApt11.indexOf(inputNumber) === -1) {
+        arrayApt11.push(inputNumber);
+        newInputList = document.createElement("li");
+        newInputList.textContent = inputNumber;
+        listApt11.appendChild(newInputList);
+        fillList();
+    } else {
+        window.alert("El numero ya esta en la lista");
+    }
+}
+
+btnApt11.addEventListener("click", addToList);
+
+
+
+// El código siguiente, añade un eventListener a cada botón para que cuando se haga click en cada uno de
+// ellos, le cambie el backgroundColor.
+// Refactorizar el código para hacerlo con
+// un único forEach.
+// Nota:
+// 1. Para transformar un HTMLCollection a
+// un array, podemos hacer:
+// Array.from(HTMLCollection);
+// 2. Para acceder al elemento que
+// “disparó” el evento, podemos
+// usar evento.target.
+
+
+// const buttons = document.getElementsByClassName("btn");
+
+// Array.from(buttons).forEach(element => {
+
+// })
+
