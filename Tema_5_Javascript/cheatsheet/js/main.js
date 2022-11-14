@@ -95,7 +95,7 @@ console.log("Hola Mundo".concat(". Adios Mundo"));
 str = str + ". Adios Mundo";
 str += ", Adios Mundo";
 console.log(str);
-let boolean === boolean={}
+// let boolean === boolean={}
 console.log(str.replace("Mundo", "Futuro"));
 console.log(str.replaceAll("Mundo", "Futuro"));
 console.log(str.toLowerCase());
@@ -171,6 +171,33 @@ const person3 = {
 
 person2.talk();
 person3.talk();
+
+
+//----------------------------------------------------Object Contructor using function
+
+function Car(brand, color, weight, topSpeed) {  // Para crear un constructor
+    this.brand = brand;
+    this.color = color;
+    this.weight = weight;
+    this.topSpeed = topSpeed;
+    this.getDescription = function() {
+        return `This ${this.color} ${this.brand} weigth ${this.weight}` +
+        `kilos and can reach up to ${this.topSpeed} kms/h.`;
+    }
+}
+
+const car1 = new Car("Mercedes", "red", undefined, 200);
+const car2 = new Car("Volvo", "grey", 2500, 180);
+const car3 = new Car("BMW", "blue", 1500, 175);
+
+console.log(car1, car2, car3);
+
+console.log(car2.color);
+
+console.log(car3.getDescription);
+
+
+
 
 //------------------------------------------Arrays---------------------------
 

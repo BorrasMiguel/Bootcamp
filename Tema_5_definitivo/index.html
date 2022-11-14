@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        a{
+            font-size: 3em;
+            display: block;
+        }
+
+        .grandparent {
+            height: 500px;
+            background-color: brown;
+
+        }
+
+        .grandparent, .grandparent div {
+            border: 5px solid black;
+            box-sizing: border-box;
+            display: flex;
+            gap: 25px;
+            flex-grow: 1px;
+            padding: 25px;
+        }
+
+        .parent {
+            background-color: darkcyan;
+        }
+
+
+        .child {
+            background-color: khaki;
+        }
+
+        .bg-red{
+            background-color: red;
+        }
+
+        #container {
+            height: 100px;
+            padding: 100px;
+            border: 3px solid gray;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1>Acceso al DOM</h1>
+    <div class="grandparent" id="grandparent">
+        <div class="parent bg-dark" id="parent1">
+            <div class="child" id="child1">child1</div>
+            <div class="child" id="child2">child2</div>
+        </div>
+        <div class="parent" id="parent2">
+            <div class="child" id="child3">child3</div>
+            <div class="child" id="child4">child4</div>
+        </div>
+    </div>
+
+    <h2>Eventos</h2>
+    <div id="container">
+        <button id="changeColor">Cambiar de color</button>
+    </div>
+
+    <label for="emailInput">Introduce tu email</label>
+    <input type="email" id="emailInput">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/dom.js"></script>
+</body>
+</html>

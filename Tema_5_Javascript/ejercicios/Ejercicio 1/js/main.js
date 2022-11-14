@@ -169,9 +169,6 @@ function addToList() {
     let inputNumber = Number(inputApt11.value);
     if (arrayApt11.indexOf(inputNumber) === -1) {
         arrayApt11.push(inputNumber);
-        newInputList = document.createElement("li");
-        newInputList.textContent = inputNumber;
-        listApt11.appendChild(newInputList);
         fillList();
     } else {
         window.alert("El numero ya esta en la lista");
@@ -181,7 +178,12 @@ function addToList() {
 btnApt11.addEventListener("click", addToList);
 
 
+// Aparatado 12. Crearemos una clase .btn en CSS que le de ciertos estilos a un botón. Al hacer click en el botón haremos
+// “toggle” o alternaremos esa clase, es decir, si está presente la quitaremos y si no está, la añadiremos.
+document.getElementById("toggler").onclick = (e) => e.target.classList.toggle("btn");
 
+
+// Aparatado 12. Extra
 // El código siguiente, añade un eventListener a cada botón para que cuando se haga click en cada uno de
 // ellos, le cambie el backgroundColor.
 // Refactorizar el código para hacerlo con
@@ -194,10 +196,40 @@ btnApt11.addEventListener("click", addToList);
 // “disparó” el evento, podemos
 // usar evento.target.
 
+//const buttons = document.getElementsByClassName("btnApt12"); // Devuelve HTML Collections
 
-// const buttons = document.getElementsByClassName("btn");
+// buttons[0].addEventListener("click", () => {
+//     buttons[0].style.backgroundColor = "red";
+// });
 
-// Array.from(buttons).forEach(element => {
+// buttons[1].addEventListener("click", () => {
+//     buttons[1].style.backgroundColor = "red";
+// });
 
-// })
+// buttons[2].addEventListener("click", () => {
+//     buttons[2].style.backgroundColor = "red";
+// });
+
+// Solucion 1
+
+// Array.from(buttons).forEach(button => button.onclick = e => e.target.style.backgroundColor = "red");
+
+// Array.from(buttons).forEach(button => {
+
+//     buttons.addEventListener("click", function (e) {
+//         e.target.style.backgroundColor = "red";
+//     });
+
+// });
+// Solucion 2
+
+const buttons = document.querySelectorAll(".btnApt12");  //Devuelve un NodeList que tiene disponible forEach. No hace falta transformalo a un ARRAY.
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", function (e) {
+        e.target.style.backgroundColor = "red";
+    });
+
+});
 
