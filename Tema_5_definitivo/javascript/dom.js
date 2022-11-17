@@ -60,7 +60,7 @@ let myDiv2 = myDiv;
 // parent2.appendChild(myDiv2); // Mismo nodo con nombres diferentes.
 
 myDiv2 = myDiv.cloneNode(true);
-parent2.appendChild(myDiv2); //Creamo un nuevo nodo a partir del original.
+parent2.appendChild(myDiv2); //Creamos un nuevo nodo a partir del original.
 myDiv2.textContent = "Child 3";
 
 myDiv.remove();
@@ -108,6 +108,9 @@ emailInput.addEventListener("focus", inputListener); //Cuando estas dentro del f
 emailInput.addEventListener("blur", inputListener); // Cuando te sales del formulario
 // SIrven para validar los formularios
 
+emailInput.addEventListener("keydown", inputListener);
+emailInput.addEventListener("keyup", inputListener);
+
 function inputListener (e) {
     console.log("Tipo de evento: ",e.type);
     if (e.type === "focus") {
@@ -119,8 +122,17 @@ function inputListener (e) {
 
 const container = document.getElementById("container");
 
+
+const changeTitle = e => {
+    document.getElementsByClassName("h2").textContent = emailInput.value; //Obtener el valor de un input.
+}
+
 container.addEventListener("mouseover", inputListener);
-container.addEventListener("mouseout", inputListener);
+container.addEventListener("mouseout", changeTitle);
 
 
-
+function coords (e) {  // Como es una funcion que vamos a utilizar en un evento, ponemos que reciba ese evento
+    const h1 = document.querySelectorAll("h1")[1];
+    h1.textContent = `X: ${e.clientX} | Y: ${e.clientY}`;
+}
+document.body.addEventListener("mousemove", coords);
