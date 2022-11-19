@@ -63,3 +63,142 @@ textArea5.addEventListener("input", e => {
     e.target.value.length > 15 ? e.target.style.color = "red" : e.target.style.color = "green";
 })
 
+// Apapartado 6 Añadir un input de tipo texto con leyenda: “Escribir un número par”. Añadir un botón. Al pulsar el botón
+// nos validará si el número es par o no. En caso negativo, cambiar los bordes del input a rojo.
+// Para revertir el estado de una propiedad, podemos utilizar el valor “revert” o dejarla vacío.
+
+const input6 = document.getElementById("input6");
+input6.nextElementSibling.addEventListener("click", () => {   //Otra forma de acceder al boton que se encuentra debajo del input en el html.
+    if (input6.value % 2 === 0) {
+        input6.style.border = "2px solid green";
+    } else {
+        input6.style.border = "2px solid red";
+    }
+})
+
+// Aparatado 7 Partiendo de una lista ul, crear 10 li con un texto indicando el número del elemento (“Elemento X”)
+//usando un bucle for.
+
+const ul7 = document.getElementById("ul7");
+
+for (let i = 0; i <= 10; i++) {
+    const li7 = document.createElement("li");
+    li7.textContent = `Elemento ${i}`;
+    ul7.appendChild(li7);
+}
+
+// Apartado 8. Crear un enlace y un botón. Si pulso el enlace se me abre la URL en la misma página. Si pulso primero el
+// botón y luego el enlace, se me abre en una nueva pestaña.  Añadir target = _blank
+
+const link8 = document.getElementById("link8");
+const button8 = document.getElementById("button8");
+
+button8.addEventListener("click", () => link8.target = "_blank");  //Accedemos directamente a la propiedad, tambien se podria realizar con setAtributte
+
+// Apartado 9. Añadir un párrafo y un select con 5 opciones de colores: negro, blanco, rojo, amarillo, verde y azul. Al
+//seleccionar un color del select, cambiar el color del párrafo.
+
+const p9 = document.getElementById("p9");
+const selectChange = document.querySelector("#select9");
+
+selectChange.addEventListener("change", () => p9.style.color = selectChange.value);
+
+// Aparatado 10. Incluir un botón que al pulsarlo genere un número aleatorio y mantenga en una lista actualizada el número
+// de elementos que se han generado, los que son pares y los que son impares.
+
+const randomButton = document.getElementById("button10");
+const currentRandom = document.getElementById("currentRandom");
+const totalNumbers = document.getElementById("totalNumbers");
+const oddNumbers = document.getElementById("oddNumbers");
+const evenNumbers = document.getElementById("evenNumbers");
+
+randomButton.onclick = () => {
+    const randomNumber = Math.floor(Math.random()*100);
+    currentRandom.textContent = randomNumber;
+
+    totalNumbers.textContent++;
+
+    randomNumber % 2 === 0 ? evenNumbers.textContent++ : oddNumbers.textContent++;
+
+};
+
+//  Aparatado 11. Construir una lista que tenga números. Añadir un input donde poder añadir números y un botón. Al pulsar
+// el botón, si el número ya existe en la lista, mostrar un mensaje de error, si no existe, lo añadirá al
+// principio.
+
+const numberList = document.getElementById("numberList");
+const inputNumber = document.getElementById("inputNumbers11");
+const inputButton = document.getElementById("inputButton11");
+
+let arrayNumbers11 = [];
+
+function fillList() {
+    let num = inputNumber.value;
+    if (arrayNumbers11.includes(num) || num === "") {
+        alert("error");
+    } else {
+        let newLi11 = document.createElement("li");
+        newLi11.textContent = num;
+        arrayNumbers11.push(num);
+        numberList.appendChild(newLi11);
+        inputNumber.value = "";
+    }  
+}
+
+inputButton.addEventListener("click", fillList);
+
+
+// Aparatado 12. Crearemos una clase .btn en CSS que le de ciertos estilos a un botón. Al hacer click en el botón haremos
+// “toggle” o alternaremos esa clase, es decir, si está presente la quitaremos y si no está, la añadiremos.
+
+document.querySelector("#btn12").onclick = (e) => e.target.classList.toggle("btn");
+
+// Aparatado 13. Extra
+// El código siguiente, añade un eventListener a cada botón para que cuando se haga click en cada uno de
+// ellos, le cambie el backgroundColor.
+// Refactorizar el código para hacerlo con
+// un único forEach.
+// Nota:
+// 1. Para transformar un HTMLCollection a
+// un array, podemos hacer:
+// Array.from(HTMLCollection);
+// 2. Para acceder al elemento que
+// “disparó” el evento, podemos
+// usar evento.target.
+
+const buttons = document.getElementsByClassName("btn-red"); //Devuelve un HTML Collection
+
+// buttons[0].addEventListener("click", () => {
+//     buttons[0].style.backgroundColor = "red";
+// })
+
+// buttons[1].addEventListener("click", () => {
+//     buttons[1].style.backgroundColor = "red";
+// })
+
+// buttons[2].addEventListener("click", () => {
+//     buttons[2].style.backgroundColor = "red";
+// })
+
+//Solucción 1
+// Array.from(buttons).forEach(button => {
+//     button.onclick = e => {
+//         e.target.style.backgroundColor = "red";
+//     }
+// })
+
+
+//Solución 2
+
+const buttons12 = document.querySelectorAll(".btn-red"); //Devuelve un nodeList que tiene disponible la función forEach
+
+buttons12.forEach(button => {
+    button.addEventListener("click", (e) => {
+        e.target.style.backgroundColor = "red";
+    })
+})
+
+
+
+
+
