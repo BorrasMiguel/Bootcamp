@@ -109,6 +109,22 @@ let person2 = {
 
 person2.talk();
 
+//-------------------------------------Objects Constructor using Functions
+function Car(marca, color, weight, topSpeed) {
+    this.marca = marca;
+    this.color = color;
+    this.weight = weight;
+    this.topSpeed = topSpeed;
+    this.getDescription = function() {
+        return `This ${this.marca} ${this.weight} kilos and can reach up to ${this.topSpeed} kms/h`
+    }
+}
+
+const car1 = new Car("mercedes", "red", 2000, 300);
+const car2 = new Car("volvo", "grey", 1500, 280);
+const car3 = new Car("volkwagen", "green", 1800, 380);
+
+console.log(car1, car2, car3.getDescription);
 //-------------------------------------Arrays
 
 let selectedColors = ["red", "blue",]; //Array de Strings
