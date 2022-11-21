@@ -344,3 +344,107 @@ mainloop: while (true) {
     }
 }
 
+
+
+
+
+
+
+
+//------------------------------------------------------- Higher Order Functions
+// Map  Crea un array nuevo
+
+
+//Sin Map(), como lo hariamos.
+let arr1 = [1, 2, 3];
+let arr2 = [];
+
+for (let num of arr1) {
+    arr2.push(num*2);
+}
+
+
+// Con Map() y una funcion nombrada
+arr1 = [1, 2, 3];
+arr2 = arr1.map(myFunction());
+
+function myFunction(num) {
+    return num * 2;
+}
+
+
+// Con Map() y una funcion anónima.
+
+arr1 = [1, 2, 3];
+arr2 = arr1.map(num => num * 2)
+
+console.log(arr1, arr2);
+
+
+
+//MiniEjercicio. A partir de un array de años, calcular la edad de esa persona.
+
+
+const birthYears = [1990, 1980, 1970, 1975];
+
+let calculateAge = birthYears.map(year => 2022 - year);
+console.log(calculateAge);
+
+
+// Filter 
+const prices = [150, 40, 35, 100, 237, 49];
+const expensives = prices.filter(price => price >= 50);;
+
+console.log(expensives);
+
+
+
+
+const cars = [
+    {
+        brand: "BMW",
+        year: 1990,
+        pleteNumber: "ASD3456",
+        address: {
+            street: "lo que sea",
+            city: "woonderland"
+        }
+    },
+    {   
+        brand: "Mercedes",
+        year: 2012,
+        pleteNumber: "ASD34ewf56",
+        address: {
+            street: "lo que sea",
+            city: "no se"
+        }
+    },
+    {
+        brand: "Volvo",
+        year: 2021,
+        pleteNumber: "ASD3agh456",
+        address: {
+            street: "lo que sea",
+            city: "Linares"
+        }
+    },
+]
+
+
+console.log(cars.filter(car => car.address.city === "Linares"));
+
+
+console.log(cars.map(car => car.brand));
+
+console.log(cars);
+
+cars.sort((car1, car2) => car1.year - car2.year);
+
+console.log(cars);
+
+
+// Reduce
+
+const arr = [10, 7, 4, 13, 20];
+
+console.log(arr.reduce((sum, currentNumber) => sum + currentNumber, 0));  //El cero es el valor inicial que queremos que tenga la operacion
