@@ -109,6 +109,24 @@ let person2 = {
 
 person2.talk();
 
+
+//----------------------------------------Copiar Objetos en JS
+
+// let obj1 = {property: 5},
+// let obj22 = obj1;   // No es una copia es el mismo objeto con distinto nombre.
+
+// obj22 = {...obj1} // Copia superficial que haremos practicamente siempre.
+
+// Tambien sirve con arrays
+
+let arr = [1, 2, 3];
+
+let arr2 = [0, ...arr, 4];
+
+console.log(arr2);
+
+
+
 //-------------------------------------Objects Constructor using Functions
 function Car(marca, color, weight, topSpeed) {
     this.marca = marca;
@@ -357,10 +375,10 @@ mainloop: while (true) {
 
 //Sin Map(), como lo hariamos.
 let arr1 = [1, 2, 3];
-let arr2 = [];
+let arr21 = [];
 
 for (let num of arr1) {
-    arr2.push(num*2);
+    arr21.push(num*2);
 }
 
 
@@ -445,6 +463,6 @@ console.log(cars);
 
 // Reduce
 
-const arr = [10, 7, 4, 13, 20];
+const arr12 = [10, 7, 4, 13, 20];
 
 console.log(arr.reduce((sum, currentNumber) => sum + currentNumber, 0));  //El cero es el valor inicial que queremos que tenga la operacion
