@@ -96,4 +96,23 @@ updateTable();
 
 // updateTable();
 
+saveButton.addEventListener("click", e => {
+    //e.preventDefault(); //Quita el comportamiento por defecto del HTML. Se utiliza sobre todo en los formularios, 
 
+    const newID = arrayBooks[arrayBooks.length-1].id + 1;
+
+    arrayBooks.push(new Books(
+        newID,
+        inputTitle.value,
+        inputAuthor.value,
+        inputVentas.value,
+        inputPrecio.value)
+    );
+
+    updateTable();
+
+    inputTitle.value = "";
+    inputAuthor.value = "";
+    inputVentas.value = "";
+    inputPrecio.value = "";
+});

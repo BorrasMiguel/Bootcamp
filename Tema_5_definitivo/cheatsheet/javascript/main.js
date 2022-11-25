@@ -310,6 +310,11 @@ while (contador <= 10) {
     contador++;
 }
 
+// For of y forEach son iguales, se utilizan cuando queramos iterar arrays. 
+// While - Cuando no sepamos la cantidad de iteraciones.
+// Cuando queramos iterar las propiedades de un objeto
+// For (let i=0; .....) Cuando ninguno de los anteriores nos valga.
+
 //-----------------------ForEach (Pertenece a los arrays)
 
 numberArray.forEach(function (value, index) {
