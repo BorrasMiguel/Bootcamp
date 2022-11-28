@@ -107,7 +107,7 @@ class Animal {
         console.log(`This ${this.type} named ${this.name} goes ${this.sound}`);
     }
 
-    static compareAnimals(animal1, animal2) {
+    static compareAnimals(animal1, animal2) {   //Esto podria estar fuera perfectamente, porque es genérico, no pertenece a las instancias.
         return animal1.type === animal2.type;
     }
 }
