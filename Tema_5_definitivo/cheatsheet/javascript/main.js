@@ -23,7 +23,7 @@ console.log(selectColor, typeof selectColor);
 
 //--------------------Objetos
 
-let array = Array(1, 2, 3);
+let array = Array(1, 2, 3); 
 let array2 = [1, 2, 3];
 
 console.log(array, array2);
@@ -113,7 +113,7 @@ person2.talk();
 //----------------------------------------Copiar Objetos en JS
 
 // let obj1 = {property: 5},
-// let obj22 = obj1;   // No es una copia es el mismo objeto con distinto nombre.
+// let obj22 = obj1;   // No es una copia, es el mismo objeto con distinto nombre.
 
 // obj22 = {...obj1} // Copia superficial que haremos practicamente siempre.
 
@@ -284,7 +284,7 @@ console.log(perimeterOfSquare(4));
 
 //-----------------------------Bucles
 
-//---------------------------------For(Cuando sabemos el numro de repeticion)
+//---------------------------------For(Cuando sabemos el numero de repeticion)
 for (let i = 0; i <= 10; i++) {
     console.log(`Indice: ${i}`);
 }
@@ -377,7 +377,7 @@ mainloop: while (true) {
 //------------------------------------------------------- Higher Order Functions
 // Map  Crea un array nuevo
 
-
+//Crear un nuevo array a partir de uno y multiplicarlo por dos.
 //Sin Map(), como lo hariamos.
 let arr1 = [1, 2, 3];
 let arr21 = [];
@@ -470,4 +470,4 @@ console.log(cars);
 
 const arr12 = [10, 7, 4, 13, 20];
 
-console.log(arr.reduce((sum, currentNumber) => sum + currentNumber, 0));  //El cero es el valor inicial que queremos que tenga la operacion
+console.log(arr12.reduce((sum, currentNumber) => sum + currentNumber, 0));  //El cero es el valor inicial que queremos que tenga la operacion

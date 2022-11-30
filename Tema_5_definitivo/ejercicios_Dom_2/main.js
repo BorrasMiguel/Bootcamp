@@ -70,9 +70,9 @@ textArea5.addEventListener("input", e => {
 const input6 = document.getElementById("input6");
 input6.nextElementSibling.addEventListener("click", () => {   //Otra forma de acceder al boton que se encuentra debajo del input en el html.
     if (input6.value % 2 === 0) {
-        input6.style.border = "2px solid green";
+        input6.style.border = "5px solid green";
     } else {
-        input6.style.border = "2px solid red";
+        input6.style.border = "5px solid red";
     }
 })
 

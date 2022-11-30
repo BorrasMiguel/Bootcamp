@@ -8,6 +8,8 @@ function randomBetweenRange(start, end) {
 }   // Funcion que crea números aleatorios entre el rango que elijamos
 
 
+console.log(randomBetweenRange(100, 200));
+
 let employees = [];
 for (let i = 0; i <= 100; i++) {
     employees.push({
