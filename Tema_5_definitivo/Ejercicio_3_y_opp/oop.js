@@ -32,14 +32,14 @@ Car.prototype.getHp = function() {
 myCar.getHp();
 myCar2.getHp();
 
-// FOrma antigua de hacer las cosas
+// FOrma antigua de hacer las cosas (Herencia)
 function SUV(brand, model, year, width, height) {
     Car.call(this, brand, model, year);
     this.width = width;
     this.height = height;
 }
 
-SUV.prototype = Object(Car.prototype);
+SUV.prototype = Object(Car.prototype);  //Copiar el prototipo de car para hacer una herencia basica. Un folloón!!!
 
 let mySUV = new SUV("Audi", "Q3", 2017, 2200, 2000);
 
