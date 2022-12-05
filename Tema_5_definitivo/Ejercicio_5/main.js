@@ -35,6 +35,7 @@ const inputVentas = document.getElementById("inputVentas");
 const inputPrecio = document.getElementById("inputPrecio");
 const saveButton = document.getElementById("saveButton");
 const booksBody = document.getElementById("tableBody");
+const tFoot = document.querySelector("tfoot");
 
 
 // Function Update table
@@ -53,6 +54,11 @@ function updateTable() {
             <td>${book.price}</td>
         </tr>`; 
     });
+
+    const totalPrice = displayedBooks.reduce((priceSum, book) => {
+        return priceSum + book.price}, 0);
+    
+    tFoot.textContent = `Precio total ${totalPrice}`;
 }
 
 
@@ -103,3 +109,7 @@ priceHeader.addEventListener("click", e => {
 
     updateTable();
 })
+
+
+
+
