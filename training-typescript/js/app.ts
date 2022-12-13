@@ -1,5 +1,5 @@
-const sayHello = () => {
-    console.log("Hello world");
-    
-}
-sayHello();
+let user:string = "John";
+let num:number = 1;
+let isActive:boolean = true;
+
+
