@@ -99,7 +99,7 @@ updateTable();
 saveButton.addEventListener("click", e => {
     //e.preventDefault(); //Quita el comportamiento por defecto del HTML. Se utiliza sobre todo en los formularios, 
 
-    const newID = arrayBooks[arrayBooks.length-1].id + 1;
+    const newID = arrayBooks[arrayBooks.length-1].id + 1; // Accedemos al id del ultimo libro y le sumamos 1. Ejemplo: arrayBooks[5].id 
 
     arrayBooks.push(new Books(
         newID,
