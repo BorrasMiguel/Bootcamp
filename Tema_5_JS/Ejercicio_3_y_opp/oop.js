@@ -77,7 +77,7 @@ class Magazine extends Book {
     
     constructor(titulo, autor, year, month){
         super(titulo, autor, year)
-        this.month = month;    //Para ñadir una nueva propiedad
+        this.month = month;    //Para añadir una nueva propiedad
     }
     
     
