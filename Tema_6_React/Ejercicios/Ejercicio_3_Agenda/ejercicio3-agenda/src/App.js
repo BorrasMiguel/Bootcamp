@@ -2,6 +2,7 @@ import { useState } from "react";
 import './App.css';
 import Agenda from "./components/Agenda";
 import Formulario from './components/Formulario';
+import Formulariov2 from "./components/Formulariov2";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
       <h2 className="my-4">Nuevo Contacto</h2>
       <Formulario setContacto={setContacto} />
+      {/* <Formulariov2 setContacto={setContacto} /> */}
 
     </div>
   );

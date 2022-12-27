@@ -1,6 +1,6 @@
 //rfc
 import { useState } from 'react'
-import FirstComponent from './FirstComponent';
+
 
 
 export default function Counter() {

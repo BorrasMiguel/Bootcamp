@@ -17,7 +17,9 @@ export default function Agenda({ contactos, setContacto }) {
                     <li className="list-group-item">{contacto.apellidos}</li>
                     <li className="list-group-item">{contacto.telefono}</li>
                     <li className="list-group-item">{contacto.ciudad}, {contacto.codigoPostal}</li>
-                    <li className="list-group-item"><button className="btn btn-danger" onClick={eliminarContacto(contacto.telefono)}>Eliminar</button></li>
+                    <li className="list-group-item">
+                        <button className="btn btn-danger" onClick={eliminarContacto(contacto.telefono)}>Eliminar</button>
+                    </li>
                 </ul>
                 );
             })}
