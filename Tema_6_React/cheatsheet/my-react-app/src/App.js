@@ -1,8 +1,12 @@
 import './App.css';
 import FirstComponent, {SecondComponent, ThirdComponent} from "./components/FirstComponent";
 import Counter from "./components/Counter";
+import { useState, createContext } from 'react';
 import UseEffectComponent from './components/UseEffectComponent';
-import { useState } from 'react';
+import UseContextComponent from './components/UseContextComponent';
+import Router from './Router';
+
+export const GlobalContext = createContext({});
 
 function App() {
 
@@ -16,8 +20,14 @@ function App() {
       <SecondComponent />
       <ThirdComponent /> */}
       
-      {show && <UseEffectComponent />}  
-      <button onClick={() => setShow((!show))}>Show</button>
+      {/* {show && <UseEffectComponent />}  
+      <button onClick={() => setShow((!show))}>Show</button> */}
+
+      {/* <GlobalContext.Provider value= "Soy un string guardado en un contexto">
+        <UseContextComponent />
+      </GlobalContext.Provider> */}
+
+      <Router />
 
     </div>
   );
