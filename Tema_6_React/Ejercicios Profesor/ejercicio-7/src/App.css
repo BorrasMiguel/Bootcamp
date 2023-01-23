@@ -1,0 +1,30 @@
+aside {
+  flex-basis: 250px;
+}
+
+.card {
+  flex-basis: 400px;
+}
+
+.menu {
+  width: 200px;
+}
+
+.card-text {
+  overflow:hidden;
+  line-height: 1.8rem;
+  max-height: 8rem;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    position: relative !important;
+    width: 100%;
+  }
+}
