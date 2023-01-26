@@ -1,9 +1,9 @@
-import{useState, useEffect} from 'react';
+import{ useEffect } from 'react';
 
-export default function useFetch(url, setState) {
+export default function useFetch(url, setToDos) {
     useEffect(() => {
         fetch(url)
         .then(response => response.json())
-        .then(data => setState(data));
+        .then(data => setToDos(data))
       }, []);
 }
