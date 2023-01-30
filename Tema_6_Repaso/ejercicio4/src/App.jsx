@@ -1,24 +1,23 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import List from './components/List';
+import { useState } from 'react'
+import useFecht from './hooks/useFecht';
+import NewToDo from './components/NewToDo';
+import ToDo from './components/ToDo';
 
 
 function App() {
 
   const URL = "https://jsonplaceholder.typicode.com/todos";
 
+  useFecht(URL, setToDos)
+
   const [toDos, setToDos] = useState([])
 
-  useEffect(() => {
-    fetch(URL)
-      .then(response => response.json())
-      .then(data => setToDos(data))
-  }, [])
-
-
   return (
-    <div className="container my-3">
-      <List toDos={toDos} setToDos={setToDos}/>
+    <div className="container">
+      <h1>ToDo List</h1>
+      <NewToDo setToDos={setToDos}/>
+      <ToDo toDos={toDos} setToDos={setToDos}/>
     </div>
   )
 }
