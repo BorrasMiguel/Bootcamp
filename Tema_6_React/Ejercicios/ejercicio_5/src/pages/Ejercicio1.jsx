@@ -1,4 +1,5 @@
-import Cards from "../components/Card";
+import Cards from "../components/FirstComponent"
+
 
 export default function Ejercicio1() {
   return (
@@ -20,4 +21,5 @@ export default function Ejercicio1() {
     </div>
   );
 }
+
 

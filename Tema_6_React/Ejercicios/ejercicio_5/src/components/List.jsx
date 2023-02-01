@@ -1,5 +1,5 @@
 
-export default function ShoppingList(props) {    
+export default function List(props) {    
 
   const {category, products} = props;
 

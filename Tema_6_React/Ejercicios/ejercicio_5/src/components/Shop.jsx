@@ -1,4 +1,4 @@
-import ShoppingList from "./ShoppingList"
+import List from "./List"
 
 export default function Shop() {
 
@@ -24,9 +24,9 @@ export default function Shop() {
 
     return (
         <div>
-            <ShoppingList category="electronica" products={shoppingList.electronica}/>
-            <ShoppingList category="alimentacion" products={shoppingList.alimentacion}/>
-            <ShoppingList category="mascotas" products={shoppingList.mascotas}/>
+            <List category="electronica" products={shoppingList.electronica}/>
+            <List category="alimentacion" products={shoppingList.alimentacion}/>
+            <List category="mascotas" products={shoppingList.mascotas}/>
         </div>
 
     )
