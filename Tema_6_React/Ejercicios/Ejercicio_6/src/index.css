@@ -1,0 +1,30 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+}
+
+a:link {
+  text-decoration: none;
+}
+
+nav .active, nav .active:hover, nav .active:active, nav .active:visited {
+  color: green !important;
+}
+
+.completed {
+  background-color: #ddd !important; 
+  color: #333 !important;
+}
+
+.completed span {
+  text-decoration: line-through;
+}
+
